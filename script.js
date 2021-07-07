@@ -7,20 +7,25 @@ let colors = ["highest", "high", "low", "lowest"];
 let deleteMode = false;
 
 let allFiltersChildren = document.querySelectorAll(".filter div");
+let allFilters = document.querySelectorAll(".filter");
 
-for (let i = 0; i < allFiltersChildren.length; i++) {
-  allFiltersChildren[i].addEventListener("click", function (e) {
+for (let i = 0; i < allFilters.length; i++) {
+  allFilters[i].addEventListener("click", function (e) {
 
     if (e.currentTarget.classList.contains("filter-selected")) {
       e.currentTarget.classList.remove("filter-selected");
       loadTasks();
       return;
     } else {
-      // if filterMode is off, turn it on and add its class
+      for (let i = 0; i < allFilters.length; i++) {
+        if (allFilters[i].classList.contains("filter-selected")) {
+          allFilters[i].classList.remove("filter-selected");
+        }
+      }
       e.currentTarget.classList.add("filter-selected");
     }
 
-    let filterColor = e.currentTarget.classList[0];
+    let filterColor = allFiltersChildren[i].classList[0];
     loadTasks(filterColor);
     
   });
