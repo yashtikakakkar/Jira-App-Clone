@@ -1,6 +1,6 @@
 ## Jira-App-Clone
 
-This is a clone of Atlassian's very famous Jira App, with some UI modifications, which helps us in prioritizing our tasks and boosting our productivity easily. 
+This is a clone of Atlassian's very famous Jira App, with some UI modifications, which helps us in prioritizing our tasks and boosting our productivity effectively. 
 
 <b>Some key features provided in the web app are:</b>
 
